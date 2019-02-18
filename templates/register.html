@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+{% block content %}
+    <legend class="border-bottom text-black mb-4 col-sm-7" style="text-align:center;"><h1><samp>Join Today</samp></h1></legend>
+	<form>
+      <div class="form-group row">
+        <label for="inputFname3" class="col-sm-2 col-form-label-lg text-black ml-3">First name</label>
+        <div class="col-sm-4 pt-1">
+          <input type="text" class="form-control" id="inputFname3" placeholder="Enter first name">
+        </div>
+        <div class="text-black" style="margin-left:100px;">
+
+        <!-- 4:3 aspect ratio -->
+        <div class="embed-responsive embed-responsive-4by3">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=g5YP_991Eoo"></iframe>
+        </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputLname3" class="col-sm-2 col-form-label-lg text-black ml-3">Last name</label>
+        <div class="col-sm-4 pt-1">
+          <input type="text" class="form-control" id="inputLname3" placeholder="Enter last name">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputEmail3" class="col-sm-2 col-form-label-lg text-black ml-3">Email</label>
+        <div class="col-sm-4 pt-1">
+          <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword3" class="col-sm-2 col-form-label-lg text-black ml-3">Password</label>
+        <div class="col-sm-4 pt-1">
+          <input type="password" class="form-control" id="inputPassword3" placeholder="Enter password">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputConfirmPassword3" class="col-sm-2 col-form-label-lg text-blackml-3">Confirm password</label>
+        <div class="col-sm-4 pt-1">
+          <input type="password" class="form-control" id="inputConfirmPassword3" placeholder="Re-enter your password">
+        </div>
+      </div>
+      <div class="form-group row">
+          <label for="inputDOB3" class="col-sm-2 col-form-label-lg text-black ml-3">Date of Birth</label>
+        <div class="col-sm-4 pt-1">
+          <input type="date" class="form-control" id="inputDOB3" placeholder="Date of Birth">
+        </div>
+      </div>
+      <fieldset class="form-group">
+        <div class="row">
+          <legend class="col-form-label-lg col-sm-2 ml-3 text-black">Gender</legend>
+          <div class="col-sm-4">
+            <div class="form-check pt-2">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+              <label class="form-check-label text-black" for="gridRadios1">
+                Male
+              </label>
+              <input class="form-check-input ml-4" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+              <label class="form-check-label text-black ml-5" for="gridRadios2">
+                Female
+              </label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <div class="form-group row">
+        <div class="col-sm-10 text-black">
+          <button type="submit" class="btn btn-outline-dark ml-3">Sign Up</button>
+        </div>
+      </div>
+    <div class="border-top pt-2 col-sm-7">
+        <small class="text-muted">
+            Already Have An Account? <a class="ml-0" href="/login">Sign In</a>
+        </small>
+    </div>
+
+
+{% endblock content %}

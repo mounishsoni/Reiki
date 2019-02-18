@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="C:\Users\Mounish Soni\Desktop\Web-Reiki\static\mycss.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
+
+    <!-- social media icons -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+    <title>Web - Reiki</title>
+</head>
+<body>
+  
+  <nav class="navbar navbar-light navbar-expand-lg">
+    <a class="navbar-brand text-black" href="{{ url_for('home') }}"><b>LOGO Here</b>
+      <!-- <img src="reiki.jpg" width="30" height="30" class="d-inline-block align-top" alt="My image"> -->
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('home') }}"><strong>Home</strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('about') }}"><strong>About Reiki</strong></a>
+        </li>
+        <!-- dmenu is for automatic dropdown the dropbox !-->
+        <li class="nav-item dropdown dmenu">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <strong>Reiki levels</strong>
+          </a>
+          <div class="dropdown-menu sm-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="{{ url_for('level_1') }}"><dropitem>Level 1</dropitem></a>
+            <a class="dropdown-item" href="{{ url_for('level_2') }}"><dropitem>Level 2</dropitem></a>
+            <a class="dropdown-item" href="{{ url_for('level_3') }}"><dropitem>Level 3</dropitem></a>
+          </div>
+        </li>
+        <li class="nav-item dropdown dmenu" >
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <strong>Crystal</strong>
+          </a>
+          <div class="dropdown-menu sm-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{{ url_for('men') }}"><dropitem>Bracelets</dropitem></a>
+          <div class="dropdown"></div>
+          <a class="dropdown-item" href="{{ url_for('women') }}"><dropitem>Stones</dropitem></a>
+          <div class="dropdown"></div>
+          <a class="dropdown-item" href="{{ url_for('couple') }}" ><dropitem>Pendels</dropitem>
+          </a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('register') }}"><strong>Register</strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('login') }}"><strong>Login</strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('contact') }}"><strong>Contact-Us</strong></a>
+        </li>
+      </ul>
+      
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav> 
+       
+      <!-- To divide or create a section in several col -->
+      <!-- <div class="container ml-5">
+        <div class="row ">
+          <div class="col">
+            First, but unordereddscnoisdnvisndvisd wgn ergnre ngrg asglkasng n
+          </div>
+
+          <div class="col">
+            Second, but lastvninvoivinvivniov ngi ngng ng  gngn 
+          </div>
+          <div class="col">
+            Third, but firstvnnvisdvnoisdvisdnvisvnn gni gnigni gig rgier n
+          </div>
+        </div>
+      </div>
+ -->
+
+      <div class="container" id="holder">
+
+        {% block content %}{% endblock %}
+
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <div id="footer">
+              <ul class="footer">
+                <li>Website built by <a href="#">Fishplate</a></li>&nbsp;&nbsp;
+                <li>Email:exampleemail@gmail.com</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+<!-- 
+      <div class="row" id="footer">
+        <div class="col-4"id="left">
+          <a href="https://www.facebook.com/" class="fa fa-facebook" target="_blank"></a>
+          <a href="https://twitter.com/" class="fa fa-twitter" target="_blank"></a>
+          <a href="https://www.google.co.in/" class="fa fa-google" target="_blank"></a>
+          <a href="https://www.linkedin.com/" class="fa fa-linkedin" target="_blank"></a>
+          <a href="https://www.youtube.com/" class="fa fa-youtube" target="_blank"></a>
+          <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
+          <a href="https://www.pinterest.com/" class="fa fa-pinterest" target="_blank"></a>
+        </div>
+        <div class="col-4" id="center">
+          <h6 class="copyright text-black" style="text-align: center;"><samp>Copyright&copy; 2018</samp></h6>
+        </div>
+        <div class="col-4" id="right">
+          <form class=" " method="post" action"#" style="text-align:right;">
+            <input class="" placeholder="Enter An Email"  style="width:60%; height: 40px; margin: 0px; padding: 10px; border:0.5px solid black;border-bottom-left-radius: 2px;border-top-left-radius: 2px;""><button class="" type="submit" style="height:40px;margin: 0px; border:0.5px solid black; border-left:none; border-bottom-right-radius: 2px;border-top-right-radius: 2px; background-color: grey;">Subscribe</button>
+          </form>
+        </div>
+      </div> -->
+      <!-- <nav id="footer" class="navbar navbar-bottom navbar-expand-lg" style="background-color: black">
+          
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <h6 class="connect text-white"><samp>Connect us on</samp></h6>
+          <a href="https://www.facebook.com/" class="fa fa-facebook" target="_blank"></a>
+          <a href="https://twitter.com/" class="fa fa-twitter" target="_blank"></a>
+          <a href="https://www.google.co.in/" class="fa fa-google" target="_blank"></a>
+          <a href="https://www.linkedin.com/" class="fa fa-linkedin" target="_blank"></a>
+          <a href="https://www.youtube.com/" class="fa fa-youtube" target="_blank"></a>
+          <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
+          <a href="https://www.pinterest.com/" class="fa fa-pinterest" target="_blank"></a>
+
+          <h6 class="copyright text-white"><samp>Copyright&copy; 2018</samp></h6>  
+
+          <form class="bot-sign form-inline my-2 my-lg-0" method="post" action"">
+            <input class="form-control mr-sm-2" placeholder="Enter An Email" >
+            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Subscribe</button>
+          </form>
+        </div>
+      </nav> -->
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+  <script>
+    var wow = new WOW(
+      {
+        boxClass:     'wow',      // animated element css class (default is wow)
+        animateClass: 'animated', // animation css class (default is animated)
+        offset:       0,          // distance to the element when triggering the animation (default is 0)
+        mobile:       true,       // trigger animations on mobile devices (default is true)
+        live:         true,       // act on asynchronously loaded content (default is true)
+        callback:     function(box) {
+          // the callback is fired every time an animation is started
+          // the argument that is passed in is the DOM node being animated
+        },
+        scrollContainer: null // optional scroll container selector, otherwise use window
+      }
+    );
+    wow.init();
+  </script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+      $(document).ready(function () {
+        $('.navbar-light .dmenu').hover(function () {
+                $(this).find('.sm-menu').first().stop(true, true).slideDown(150);
+            }, function () {
+                $(this).find('.sm-menu').first().stop(true, true).slideUp(105)
+            });
+        });
+  </script>
+</body>
+</html>
